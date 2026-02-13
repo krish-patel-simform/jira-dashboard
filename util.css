@@ -1,0 +1,39 @@
+.flex{
+    display: flex;
+}
+.align-item-center{
+    align-items: center;
+}
+.gap{
+    gap:1rem;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+.flex-grow{
+    flex-grow: 1;
+}
+.flex-col{
+    flex-direction: column;
+}
+.gap-05{
+    gap: 0.5rem;
+}
+.align-item-flex-end{
+    align-items: flex-end;
+}
+.bg-green{
+    background-color: #90EE90;
+}
+.bg-blue{
+    background-color:#4BAEE8;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-yellow{
+    background-color: #F5CD47;
+}
+.bg-purple{
+    background-color: #7262C8;
+}
