@@ -1,0 +1,53 @@
+/* small size mobile screen */
+/* medium size mobile screen */
+
+
+/* large mobile screen */
+@media screen and (max-width:425px) and (min-width:375px)
+{
+    .tasks-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-list{
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 412px;
+    }
+    .sidebar-container{
+        /* transform: translateX(-100px); */
+        /* width: 0; */
+    }
+    .board-section2{
+        flex-direction: column;
+    }
+    .task-type-container{
+        overflow: visible;
+    }
+}
+
+
+/* Tablet Screen */
+@media screen and (min-width:425px) and (max-width:768px){
+    
+}
+
+/* Laptop Screen */
+@media screen and (max-width:1024px)
+{
+    html{
+        font-size: 12.8px;
+    }
+    .container{
+        /* grid-template-rows: auto; */
+        /* grid-template-columns: 1fr; */
+        grid-template-columns: minmax(160px,0.7fr) minmax(3fr,4.3fr);
+    }
+    .sidebar-container{
+        /* transform: translateX(-100%); */
+        /* width: 0; */
+    }
+    .main-container{
+        
+    }
+}
