@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *{
     font-family: "Open Sans", sans-serif;
     --light-text-color:#586479;
     --task-type-bg :#F0F1F4;
+    box-sizing: border-box;
 }
 body{
     margin: 0;
@@ -20,6 +22,11 @@ body{
     align-items: center;
     padding: 0 0.3rem;
     border-bottom: 1px solid grey;
+}
+.hamburger{
+    display: none !important;
+    height: 1.4rem !important;
+    aspect-ratio: 1/1;
 }
 .logo-container{
     height: 45px;
@@ -63,25 +70,14 @@ body{
 .profile p:last-child{
     color: gray;
 }
-
-.navigation div p:last-child{
-    color: grey;
-    font-size: small;
-}
-.navigation div div a{
-    text-decoration: none;
-}
-.navigation div a{
-    text-decoration: none;
-}
 a{
     color: black;
     text-decoration: none;
 }
 .navlink{
     transition: background-color 0.3s linear;
-    background-color: transparent;   /* optional but explicit */
-    color: #0052CC; /* need to change it black*/   
+    background-color: transparent;   
+    color: #0052CC;   
     height: 2rem;         
     padding: 0 1rem;   
     border-radius: 8px;
@@ -89,7 +85,6 @@ a{
 .navlink:hover{
     background-color: #2684FF;
     color: white;
-    border-radius: 8px;
 }
 .navigation > p{
     color: grey;
@@ -105,13 +100,9 @@ a{
 }
 .main-container .icon-container:last-child{
     padding: 0.2rem;
-    box-sizing: border-box;
-    /* background-color: grey; */
     border-radius: 5px;
 }
-.nobg{
-    background: none;
-}
+
 .big-icon-container{
     height: 1.5rem;
     width:  1.5rem;
@@ -135,38 +126,13 @@ a{
     padding: 0.5rem;
     margin-left: -0.8rem;
 }
-/* .filter-icons picture:first-child{
-    left: 0;
-    z-index: 5;
-}
-.filter-icons picture:nth-child(2)
-{
-    left:1.3rem;
-    z-index: 4;
-}
-.filter-icons picture:nth-child(3)
-{
-    left:2.8rem;
-    z-index: 3;
-}
-.filter-icons picture:nth-child(4)
-{
-    left:4.3rem;
-    z-index: 2;
-}
-.filter-icons picture:nth-child(4)
-{
-    left:5.8rem;
-    z-index: 1;
-} */
+
 
 .filter-search{
     font-size: 1.2rem;
     height: 2rem;
 }
-.light-text{
-    color: grey;
-}
+
 button{
     cursor:pointer;
 }
@@ -220,34 +186,12 @@ button{
     height: 100%;
     overflow: hidden;
 
-    p{
-        margin: 0.5rem;
-    }
-
     > p{
+        margin: 0.5rem;
         color: #586479;
     }
 }
 
-.highlight{
-    padding: 0.2rem;
-    color: #FFF;
-    display: inline-block;
-    border-radius: 4px;
-}
-
-.highlight-blue{
-    background-color: #0C66E4;
-}
-.highlight-green{
-    background-color: #1F845A;
-}
-.highlight-purple{
-    background-color: #7262C8;
-}
-.highlight-yellow{
-    background-color: #F5CD47;
-}
 
 picture{
     cursor: pointer;
@@ -275,9 +219,4 @@ picture{
     scrollbar-width: none;
     scroll-behavior: smooth;
     height: 100%;
-}
-
-.boad-section2
-{
-    
 }

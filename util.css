@@ -37,3 +37,28 @@
 .bg-purple{
     background-color: #7262C8;
 }
+.highlight{
+    padding: 0.2rem;
+    color: #FFF;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.highlight-blue{
+    background-color: #0C66E4;
+}
+.highlight-green{
+    background-color: #1F845A;
+}
+.highlight-purple{
+    background-color: #7262C8;
+}
+.highlight-yellow{
+    background-color: #F5CD47;
+}
+.nobg{
+    background: none;
+}
+.light-text{
+    color: grey;
+}
