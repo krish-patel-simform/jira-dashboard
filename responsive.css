@@ -5,7 +5,22 @@
 /* large mobile screen */
 @media screen and (max-width:450px)
 {
+    .sidebar-container{
+        height: 100%;
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+
+    .main-container{
+        height: fit-content;
+        /* width: 100vw; */
+    }
+
     /* WIP */
+    .filter-dropdown{
+        justify-content: center;
+    }
     .filter-container{
         justify-content: space-around;
         margin-top: 0.5rem;
@@ -29,7 +44,9 @@
     }
 
     /* perfect */
-
+    .dropdown{
+        display: block;
+    }
     .container{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -58,16 +75,72 @@
 
 
 /* Tablet Screen */
-/* @media screen and (min-width:425px) and (max-width:768px){
+@media screen and (min-width:450px) and (max-width:780px)
+{
+
+    .sidebar-container{
+        height: fit-content;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
     
-} */
+    .main-container{
+        height: fit-content;
+        /* width: 100vw; */
+    }
+
+    .big-icon-container{
+        height: 1.3rem;
+        widows: 1.3rem;
+        display: block;
+    }
+    .hamburger{
+        display: inline-block !important;
+    }
+    .filter-dropdown{
+        justify-content: center;
+    }
+    .filter-container
+    {
+        justify-content: center;
+        margin-top: 0.5rem;
+        & > p ,& .filter-button{
+            font-size: 1rem;
+        }
+    }
+    .nav{
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    .sidebar-container{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .tasks-container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-bottom: 0.5rem;
+    }
+    .card-list{ 
+        flex-direction: row;
+        overflow-x: scroll;
+        /* width: 100vh; */
+    }
+    .board-section2{
+        flex-direction: column;
+    }
+}
 
 /* Laptop Screen */
 @media screen and (max-width:1024px)
 {
-    html{
-        font-size: 12.8px;
-    }
     .container{
         /* grid-template-rows: auto; */
         /* grid-template-columns: 1fr; */

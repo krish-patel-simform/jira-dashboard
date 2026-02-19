@@ -13,15 +13,31 @@
 </head>
 <body>
     <div class="container">
+
+
         <!-- header -->
         <header class="header flex justify-space-between">
             
             <section class="flex align-item-center gap">
-                <i class="hamburger fa-solid fa-bars" ></i>
+                <label for="hidden-checkbox">
+                    <i class="hamburger fa-solid fa-bars" ></i>
+                </label>
 
-                <picture class="logo-container">
-                    <img src="https://www.pngall.com/wp-content/uploads/15/Jira-Logo-PNG-HD-Image.png" alt="Jira logo" height="100%" width="100%" />
-                </picture>
+                <figure class="logo-container">
+                    <img src="https://www.pngall.com/wp-content/uploads/15/Jira-Logo-PNG-HD-Image.png" alt="Jira logo" height="100%" width="auto" />
+                </figure>
+                
+                <!-- drop down -->
+                <select class="dropdown">
+                    <option>Your Work</option>
+                    <option>Projects</option>
+                    <option>Filter</option>
+                    <option>Dashboard</option>
+                    <option>Teams</option>
+                    <option>Plans</option>
+                    <option>Apps</option>
+
+                </select>
 
                 <nav class="flex gap nav">
                     <a href="">Your work</a>
@@ -36,9 +52,9 @@
             </section>
             
             <section class="flex gap align-item-center">
-                <input type="text" placeholder="🔍 Search.." class="search"/>
+                <input type="text" placeholder="🔍 Search" class="search"/>
                 
-                <picture class="icon-container">
+                <figure class="icon-container">
                     <svg version="1.1" id="collecticon-" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                          y="0px" width="100%" height="100%" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
                     <rect id="svgGrid" y="0" fill="none" width="16" height="16"/>
@@ -46,37 +62,42 @@
                         c0,1.103-0.897,2-2,2v2h14v-2C13.897,11,13,10.103,13,9z M8,15.5c0.931,0,1.716-0.638,1.938-1.5H6.062
                         C6.284,14.862,7.069,15.5,8,15.5z"/>
                     </svg>
-                </picture>
+                </figure>
 
-                <picture class="icon-container">
+                <figure class="icon-container">
                     <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#000000" fill-rule="evenodd" d="M8,16 C3.58172,16 0,12.4183 0,8 C0,3.58172 3.58172,0 8,0 C12.4183,0 16,3.58172 16,8 C16,12.4183 12.4183,16 8,16 Z M4.4325,6.19122 C4.4325,5.7729 4.57483,5.34907 4.8595,4.91974 C5.14417,4.49041 5.5595,4.13484 6.1055,3.85303 C6.6515,3.57121 7.28848,3.43033 8.01648,3.43033 C8.69315,3.43033 9.2905,3.54811 9.8085,3.78369 C10.3265,4.01927 10.7267,4.33961 11.009,4.74472 C11.2913,5.14983 11.4325,5.59017 11.4325,6.06573 C11.4325,6.44002 11.352,6.76805 11.191,7.04987 C11.03,7.33168 10.8387,7.57497 10.617,7.77972 C10.3953,7.98448 9.9975,8.32904 9.42349,8.81342 C9.26483,8.94992 9.13766,9.06989 9.04199,9.17337 C8.94633,9.27685 8.87516,9.37153 8.82849,9.4574 C8.4428,10.3468 6.77018,10.2464 7.0925,9.00165 C7.21383,8.73084 7.37483,8.49306 7.5755,8.2883 C7.77617,8.08354 8.04681,7.84026 8.38748,7.55844 C8.68615,7.31185 8.902,7.12583 9.035,7.00034 C9.168,6.87484 9.28,6.73502 9.371,6.5809 C9.462,6.42678 9.50748,6.25946 9.50748,6.07892 C9.50748,5.72665 9.36867,5.42944 9.091,5.18726 C8.81334,4.94507 8.45515,4.82397 8.01648,4.82397 C7.50314,4.82397 7.12514,4.94616 6.88248,5.19055 C6.63981,5.43494 6.43448,5.79491 6.26648,6.27048 C6.10781,6.76806 5.80683,7.01685 5.36349,7.01685 C5.10216,7.01685 4.88166,6.92988 4.702,6.75595 C4.52233,6.58202 4.4325,6.39378 4.4325,6.19122 Z M8,13 C7.44771,13 7,12.5523 7,12 C7,11.4477 7.44771,11 8,11 C8.55229,11 9,11.4477 9,12 C9,12.5523 8.55229,13 8,13 Z"/>
                     </svg>
-                </picture>
-                <picture class="icon-container">
+                </figure>
+                <figure class="icon-container">
                     <svg width="100%" height="100%" viewBox="0 0 1024 1024" class="icon" xmlns="http://www.w3.org/2000/svg"><path fill="#000000" d="M600.704 64a32 32 0 0130.464 22.208l35.2 109.376c14.784 7.232 28.928 15.36 42.432 24.512l112.384-24.192a32 32 0 0134.432 15.36L944.32 364.8a32 32 0 01-4.032 37.504l-77.12 85.12a357.12 357.12 0 010 49.024l77.12 85.248a32 32 0 014.032 37.504l-88.704 153.6a32 32 0 01-34.432 15.296L708.8 803.904c-13.44 9.088-27.648 17.28-42.368 24.512l-35.264 109.376A32 32 0 01600.704 960H423.296a32 32 0 01-30.464-22.208L357.696 828.48a351.616 351.616 0 01-42.56-24.64l-112.32 24.256a32 32 0 01-34.432-15.36L79.68 659.2a32 32 0 014.032-37.504l77.12-85.248a357.12 357.12 0 010-48.896l-77.12-85.248A32 32 0 0179.68 364.8l88.704-153.6a32 32 0 0134.432-15.296l112.32 24.256c13.568-9.152 27.776-17.408 42.56-24.64l35.2-109.312A32 32 0 01423.232 64H600.64zm-23.424 64H446.72l-36.352 113.088-24.512 11.968a294.113 294.113 0 00-34.816 20.096l-22.656 15.36-116.224-25.088-65.28 113.152 79.68 88.192-1.92 27.136a293.12 293.12 0 000 40.192l1.92 27.136-79.808 88.192 65.344 113.152 116.224-25.024 22.656 15.296a294.113 294.113 0 0034.816 20.096l24.512 11.968L446.72 896h130.688l36.48-113.152 24.448-11.904a288.282 288.282 0 0034.752-20.096l22.592-15.296 116.288 25.024 65.28-113.152-79.744-88.192 1.92-27.136a293.12 293.12 0 000-40.256l-1.92-27.136 79.808-88.128-65.344-113.152-116.288 24.96-22.592-15.232a287.616 287.616 0 00-34.752-20.096l-24.448-11.904L577.344 128zM512 320a192 192 0 110 384 192 192 0 010-384zm0 64a128 128 0 100 256 128 128 0 000-256z"/></svg>
-                </picture>
-                <picture class="icon-container">
+                </figure>
+                <figure class="icon-container">
                     <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <g transform="translate(0 -1028.4)">
     <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
     <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
   </g>
 </svg>
-                </picture>
+                </figure>
 
             </section>
         </header>
-        
+      
+
         <!-- navigation -->
         <nav class="sidebar-container">
+              
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="hidden-checkbox" class="checkbox" />
+
             <!-- profile -->
             <section class="flex gap">
-                <picture class="sidebar-profile-container">
+                <figure class="sidebar-profile-container">
                     <svg width="100%" height="100%" viewBox="0 0 43.015 43.015" xmlns="http://www.w3.org/2000/svg">
   <path id="profile" d="M527.352,255.432a2.6,2.6,0,0,1-1.915,1.915,98.592,98.592,0,0,1-35.891,0,2.6,2.6,0,0,1-1.915-1.915,98.571,98.571,0,0,1,0-35.888,2.6,2.6,0,0,1,1.915-1.915,98.592,98.592,0,0,1,35.891,0,2.6,2.6,0,0,1,1.915,1.915A98.567,98.567,0,0,1,527.352,255.432ZM520.825,244.6a24.835,24.835,0,0,0-6.644-4.225,9.1,9.1,0,1,0-12.647.136,25.24,25.24,0,0,0-6.31,4.089q-12.8,11.021,12.8,11.021T520.825,244.6Zm-12.8-6.049c-1.477,0-2.674-.716-2.674-1.6a1,1,0,0,1,.094-.4,2.626,2.626,0,0,1-.094-.663h.688a3.939,3.939,0,0,1,3.973,0h.688a2.626,2.626,0,0,1-.094.663,1,1,0,0,1,.094.4C510.7,237.832,509.5,238.548,508.024,238.548Z" transform="translate(-485.984 -215.983)" fill="#2d5be2"/>
                     </svg>
-                </picture>
+                </figure>
                 
                 <div class="flex-grow gap profile">
                     <p class="simple-p">Beyound Gravity</p>
@@ -85,15 +106,15 @@
             </section>
 
             <!-- Planning -->
-            <article class="navigation">
+            <article class="navigation ">
                 <p>PLANNING</p>
-                <div>
-                    <p class="simple-p">Lunar Rover</p>
-                    <p class="simple-p">Board</p>
+                <div class="bg-light-blue">
+                    <p class="simple-p color-dark-blue">Lunar Rover</p>
+                    <p class="simple-p color-dark-blue">Board</p>
                     <div class="flex flex-col gap">
                         
                         <a href="#" class="navlink flex gap-05 align-item-center">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg width="100%" height="100%" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" transform="matrix(-1,1.2246467991473532e-16,-1.2246467991473532e-16,-1,0,0)">
                                     <path fill="#3F51B5" d="M42,29H20.8c-0.5,0-1-0.2-1.4-0.6l-3.7-3.7c-0.4-0.4-0.4-1,0-1.4l3.7-3.7c0.4-0.4,0.9-0.6,1.4-0.6H42 c0.6,0,1,0.4,1,1v8C43,28.6,42.6,29,42,29z"></path>
                                     <rect x="9" y="6" fill="#CFD8DC" width="2" height="36"></rect>
@@ -105,26 +126,26 @@
                                     <path fill="#448AFF" d="M34,43H20.8c-0.5,0-1-0.2-1.4-0.6l-3.7-3.7c-0.4-0.4-0.4-1,0-1.4l3.7-3.7c0.4-0.4,0.9-0.6,1.4-0.6H34 c0.6,0,1,0.4,1,1v8C35,42.6,34.6,43,34,43z"></path>
                                     <path fill="#00BCD4" d="M35,15H20.8c-0.5,0-1-0.2-1.4-0.6l-3.7-3.7c-0.4-0.4-0.4-1,0-1.4l3.7-3.7C19.8,5.2,20.3,5,20.8,5H35 c0.6,0,1,0.4,1,1v8C36,14.6,35.6,15,35,15z"></path>
                                 </svg>
-                            </picture>Timeline</a>
+                            </figure>Timeline</a>
 
                         <a class="navlink flex gap-05 align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm6 0H4v14h4V5zm2 0v14h4V5h-4zm6 0v14h4V5h-4z" fill="#0D0D0D"/></svg>
-                            </picture>
+                            </figure>
                             Kanban board</a>
                         <a class="navlink flex gap-05 align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="100%" height="100%" viewBox="0 0 36 36"><rect x="6.48" y="18" width="5.76" height="11.52" rx="1" ry="1"/><rect x="15.12" y="6.48" width="5.76" height="23.04" rx="1" ry="1"/><rect x="23.76" y="14.16" width="5.76" height="15.36" rx="1" ry="1"/></svg>
-                            </picture>
+                            </figure>
                             Reports
                         </a>
                         <a class="navlink flex gap-05 align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg width="100%" height="100%" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.96 64 64 264.96 64 512s200.96 448 448 448 448-200.96 448-448-200.96-448-448-448z m0 831.744A384.128 384.128 0 0 1 128.256 512 384.128 384.128 0 0 1 512 128.256 384.128 384.128 0 0 1 895.744 512 384.192 384.192 0 0 1 512 895.744zM512 254.08a140.16 140.16 0 0 0-140.672 139.392 32.128 32.128 0 0 0 64.32 0c0-42.112 33.536-75.136 76.352-75.136 42.112 0 76.352 34.56 76.352 76.992 0 16-22.912 38.976-43.2 59.2-30.592 30.592-65.28 65.28-65.28 111.744v45.888a32.128 32.128 0 1 0 64.256 0v-45.888c0-19.84 23.68-43.52 46.464-66.304 29.056-29.056 62.08-62.016 62.08-104.64A141.12 141.12 0 0 0 512 254.08z m-48.192 500.928a48.192 48.192 0 1 0 96.384 0 48.192 48.192 0 0 0-96.384 0z" fill="#000000" /></svg>
-                            </picture>
+                            </figure>
                             Issues</a>
                         <a class="navlink flex gap-05 align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg fill="#000000" height="100%" width="100%" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 	 viewBox="0 0 32 32" xml:space="preserve">
                                 <g>
@@ -136,7 +157,7 @@
                                 	C1,11.8,1,11.9,1,12v9c0,0.3,0.2,0.7,0.5,0.8l14,9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0c0.1,0,0.2,0.1,0.3,0.1s0.2,0,0.3-0.1
                                 	c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0l14-9c0.3-0.2,0.5-0.5,0.5-0.8v-9C31,11.9,31,11.8,30.9,11.7z"/>
                                 </svg>
-                            </picture>
+                            </figure>
                             Components</a>
                     </div>
                 </div>
@@ -146,12 +167,12 @@
                 <p>DEVELOPMENT</p>
                     <div class="flex flex-col gap">     
                         <a href="#" class="navlink gap-05 flex align-item-center">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 -2 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M12.7361611,0.063952038 C13.2551391,0.263360331 13.5227261,0.869148905 13.3338336,1.41701869 L8.54555162,15.3051026 C8.35665911,15.8529724 7.78281676,16.1354563 7.26383885,15.936048 C6.74486095,15.7366397 6.47727387,15.1308511 6.66616638,14.5829813 L11.4544484,0.694897379 C11.6433409,0.147027596 12.2171832,-0.135456255 12.7361611,0.063952038 Z M2.41421356,8.25614867 L5.94974747,11.9885083 C6.34027176,12.4007734 6.34027176,13.0691871 5.94974747,13.4814522 C5.55922318,13.8937173 4.9260582,13.8937173 4.53553391,13.4814522 L0.292893219,9.0026206 C-0.0976310729,8.59035554 -0.0976310729,7.9219418 0.292893219,7.50967674 L4.53553391,3.03084515 C4.9260582,2.61858008 5.55922318,2.61858008 5.94974747,3.03084515 C6.34027176,3.44311021 6.34027176,4.11152395 5.94974747,4.52378901 L2.41421356,8.25614867 Z M17.5857864,8.25614867 L14.0502525,4.52378901 C13.6597282,4.11152395 13.6597282,3.44311021 14.0502525,3.03084515 C14.4407768,2.61858008 15.0739418,2.61858008 15.4644661,3.03084515 L19.7071068,7.50967674 C20.0976311,7.9219418 20.0976311,8.59035554 19.7071068,9.0026206 L15.4644661,13.4814522 C15.0739418,13.8937173 14.4407768,13.8937173 14.0502525,13.4814522 C13.6597282,13.0691871 13.6597282,12.4007734 14.0502525,11.9885083 L17.5857864,8.25614867 Z"/></svg>
-                            </picture>Code</a>
+                            </figure>Code</a>
 
                         <a class="navlink gap-05 flex align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" 
                                 	 width="100%" height="100%" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
                                 <g>
@@ -163,12 +184,12 @@
                                 		c0,1.6-0.8,3.1-2.1,3.9L30.6,42.7z"/>
                                 </g>
                                 </svg>
-                            </picture>
+                            </figure>
                             Security</a>
                         <a class="navlink flex gap-05 align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="100%" height="100%" viewBox="0 0 36 36"><rect x="6.48" y="18" width="5.76" height="11.52" rx="1" ry="1"/><rect x="15.12" y="6.48" width="5.76" height="23.04" rx="1" ry="1"/><rect x="23.76" y="14.16" width="5.76" height="15.36" rx="1" ry="1"/></svg>
-                            </picture>
+                            </figure>
                             Release
                         </a>
                     </div>
@@ -179,7 +200,7 @@
                     <div class="flex flex-col gap">
                         
                         <a href="#" class="navlink gap-05 flex align-item-center">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg version="1.1"
                                 	 id="svg2" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="upload.svg" inkscape:version="0.48.4 r9939"
                                 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="100%"
@@ -189,15 +210,15 @@
                                 	c0,259.305,210.196,469.564,469.565,469.564S1069.564,859.305,1069.564,600C1069.564,340.696,859.369,130.435,600,130.435z
                                 	 M717.392,851.087H482.608V584.348H335.87L600,335.87l264.131,248.478H717.392V851.087L717.392,851.087z"/>
                                 </svg>
-                            </picture>Deployments</a>
+                            </figure>Deployments</a>
 
                         <a class="navlink gap-05 flex align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg"><path d="M16.4,10h3.2a.76.76,0,0,0,.8-.8V6.8H31.6V9.2a.76.76,0,0,0,.8.8h3.2a.76.76,0,0,0,.8-.8V6.8A4.81,4.81,0,0,0,31.6,2H20.4a4.81,4.81,0,0,0-4.8,4.8V9.2A.76.76,0,0,0,16.4,10Z"/><path d="M26,36.66a1.79,1.79,0,1,0,1.8,1.79A1.76,1.76,0,0,0,26,36.66Z"/><rect x="24.22" y="26.49" width="3.59" height="8.97" rx="0.6"/><path d="M45.2,14.8H6.8A4.81,4.81,0,0,0,2,19.6V45.2A4.81,4.81,0,0,0,6.8,50H45.2A4.81,4.81,0,0,0,50,45.2V19.6A4.81,4.81,0,0,0,45.2,14.8ZM39.7,45H12.33c-1.5,0-2.34-1.92-1.5-3.29L24.52,19.62a1.7,1.7,0,0,1,3,0L41.19,41.74A2.1,2.1,0,0,1,39.7,45Z"/></svg>
-                            </picture>
+                            </figure>
                             Incident</a>
                         <a class="navlink gap-05 flex align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 395 395" style="enable-background:new 0 0 395 395;" xml:space="preserve">
 <g>
@@ -222,7 +243,7 @@
 		c-36.944,0-67-30.06-67-67.009V81.998C15,45.056,45.056,15,82,15h231.002C349.944,15,380,45.056,380,81.998V312.991z"/>
 </g>
 </svg>
-                            </picture>
+                            </figure>
                             On-call
                         </a>
                     </div>
@@ -233,19 +254,19 @@
                     <div class="flex flex-col gap">
                         
                         <a href="#" class="navlink gap-05 flex align-item-center">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg width="100%" height="100%" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect width="16" height="16" id="icon-bound" fill="none" />
   <path d="M3,3H1v13h11v-2H3V3z M12,0H4v13h11V3L12,0z M13,11H6V2h5v2h2V11z" />
                                 </svg>
-                            </picture>Pages</a>
+                            </figure>Pages</a>
 
                         <a class="navlink gap-05 flex align-item-center" href="#">
-                            <picture class="icon-container">
+                            <figure class="icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 0 512 512" id="_14_Add" data-name="14 Add" xmlns="http://www.w3.org/2000/svg">
   <path id="Path_19" data-name="Path 19" d="M256,512C114.625,512,0,397.391,0,256S114.625,0,256,0C397.391,0,512,114.609,512,256S397.391,512,256,512Zm0-448C149.969,64,64,149.969,64,256s85.969,192,192,192c106.047,0,192-85.969,192-192S362.047,64,256,64Zm32,320H224V288H128V224h96V128h64v96h96v64H288Z" fill-rule="evenodd"/>
 </svg>
-                            </picture>
+                            </figure>
                             Pages</a>
                     </div>
             </article>
@@ -267,25 +288,25 @@
                         </div>
                     </article>
                     <article class="heading-icons flex gap-05 align-item-flex-end">
-                            <picture class="icon icon-container">
+                            <figure class="icon icon-container">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
   <polygon fill="none" stroke="#000000" stroke-width="5" stroke-linejoin="bevel" stroke-miterlimit="10" points="40,1 17,37 31,37 
 	24,63 50,27 36,27 "/>
                                 </svg>
-                            </picture>
-                            <picture class="icon icon-container">
+                            </figure>
+                            <figure class="icon icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="star" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color"><polygon id="primary" points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></polygon></svg>
-                            </picture>
-                            <picture class="icon icon-container">
+                            </figure>
+                            <figure class="icon icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="maximize" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M10.71,14.71,5.41,20H10a1,1,0,0,1,0,2H4a2,2,0,0,1-2-2V14a1,1,0,0,1,2,0v4.59l5.29-5.3a1,1,0,0,1,1.42,1.42ZM20,2H14a1,1,0,0,0,0,2h4.59l-5.3,5.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L20,5.41V10a1,1,0,0,0,2,0V4A2,2,0,0,0,20,2Z" style="fill: rgb(0, 0, 0);"></path></svg>
-                            </picture>
-                            <picture class="icon icon-container">
+                            </figure>
+                            <figure class="icon icon-container">
                                 <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" 
                                      width="100%" height="100%" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
                                 <path d="M8,20c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6S4.7,20,8,20z M26,20c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6
                                     S22.7,20,26,20z M44,20c3.3,0,6,2.7,6,6s-2.7,6-6,6s-6-2.7-6-6S40.7,20,44,20z"/>
                                 </svg>
-                            </picture>
+                            </figure>
                     </article>
                 </section>
 
@@ -293,72 +314,73 @@
                 <section class="board-section2 flex justify-space-between">
 
 
-                    <article class="flex align-item-center gap">
+                    <article class="filter-dropdown flex align-item-center gap">
                         <input type="text" placeholder="🔍" class="filter-search"/>
                         <div class="flex filter-icons">
-                            <picture class="big-icon-container bg-green">
+                            <figure class="big-icon-container bg-green">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
       <g transform="translate(0 -1028.4)">
         <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
         <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
       </g>
                                 </svg>
-                            </picture>
-                            <picture class="big-icon-container bg-red">
+                            </figure>
+                            <figure class="big-icon-container bg-red">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
       <g transform="translate(0 -1028.4)">
         <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
         <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
       </g>
                                 </svg>
-                            </picture>
-                            <picture class="big-icon-container bg-blue">
+                            </figure>
+                            <figure class="big-icon-container bg-blue">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
       <g transform="translate(0 -1028.4)">
         <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
         <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
       </g>
                                 </svg>
-                            </picture>
-                            <picture class="big-icon-container bg-yellow">
+                            </figure>
+                            <figure class="big-icon-container bg-yellow">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
       <g transform="translate(0 -1028.4)">
         <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
         <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
       </g>
                                 </svg>
-                            </picture>
-                            <picture class="big-icon-container bg-purple">
+                            </figure>
+                            <figure class="big-icon-container bg-purple">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
       <path d="M128,20A108,108,0,1,0,236,128,108.12186,108.12186,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09562,84.09562,0,0,1,128,212Zm24.28809-88.2832a39.99987,39.99987,0,0,1-56.56934,56.56738,12.0001,12.0001,0,0,1,16.9707-16.9707A15.99967,15.99967,0,1,0,124.00293,136a11.99971,11.99971,0,0,1-9.832-18.87988l14.7832-21.12793h-24.957a12,12,0,0,1,0-24h48a11.99971,11.99971,0,0,1,9.832,18.87988l-18.32226,26.18457A40.17514,40.17514,0,0,1,152.28809,123.7168Z"/>
                                 </svg>
-                            </picture>
+                            </figure>
                         </div>
                         <nav class="flex align-item-center gap ">
-                            <a href="" class="flex align-item-center ">Epic<picture class="icon-container">
+                            <a href="" class="flex align-item-center ">Epic<figure class="icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg" ><title>down</title><path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" /></svg>
-                            </picture></a>
-                            <a href="" class="flex align-item-center ">Type<picture class="icon-container">
+                            </figure></a>
+                            <a href="" class="flex align-item-center ">Type<figure class="icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg" ><title>down</title><path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" /></svg>
-                            </picture></a>
+                            </figure></a>
                         </nav>
                     </article>  
+
                     <article class=" flex gap-05 filter-container">
                         <p class="light-text">GROUP BY</p>
                         
                         <button class="flex align-item-center filter-button">
-                            None<picture class="big-icon-container">
+                            None<figure class="big-icon-container">
                                 <svg fill="#000000" width="100%" height="100%" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg" ><title>down</title><path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" /></svg>
-                            </picture></button>
-                        <button class="flex align-item-center filter-button "><picture class="big-icon-container nobg">
+                            </figure></button>
+                        <button class="flex align-item-center filter-button "><figure class="big-icon-container nobg">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="100%" height="100%" viewBox="0 0 36 36"><rect x="6.48" y="18" width="5.76" height="11.52" rx="1" ry="1"/><rect x="15.12" y="6.48" width="5.76" height="23.04" rx="1" ry="1"/><rect x="23.76" y="14.16" width="5.76" height="15.36" rx="1" ry="1"/></svg>
-                            </picture>Insights</button>
+                            </figure>Insights</button>
                         <button class="flex align-item-center filter-button">
-                            <picture class="big-icon-container nobg">
+                            <figure class="big-icon-container nobg">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.48 18.5368H21M4.68 12L3 12.044M4.68 12C4.68 13.3255 5.75451 14.4 7.08 14.4C8.40548 14.4 9.48 13.3255 9.48 12C9.48 10.6745 8.40548 9.6 7.08 9.6C5.75451 9.6 4.68 10.6745 4.68 12ZM10.169 12.0441H21M12.801 5.55124L3 5.55124M21 5.55124H18.48M3 18.5368H12.801M17.88 18.6C17.88 19.9255 16.8055 21 15.48 21C14.1545 21 13.08 19.9255 13.08 18.6C13.08 17.2745 14.1545 16.2 15.48 16.2C16.8055 16.2 17.88 17.2745 17.88 18.6ZM17.88 5.4C17.88 6.72548 16.8055 7.8 15.48 7.8C14.1545 7.8 13.08 6.72548 13.08 5.4C13.08 4.07452 14.1545 3 15.48 3C16.8055 3 17.88 4.07452 17.88 5.4Z" stroke="#363853" stroke-width="1.5" stroke-linecap="round"/>
                                 </svg>
-                            </picture>
+                            </figure>
                             View settings
                         </button>
                     </article>
@@ -380,28 +402,28 @@
                             <p class="highlight highlight-blue">BILLING</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -411,28 +433,28 @@
                             <p class="highlight highlight-green">ACCOUNTS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-blue">
+                                    <figure class="task-icon-container bg-blue">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="check" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M10,18a1,1,0,0,1-.71-.29l-5-5a1,1,0,0,1,1.42-1.42L10,15.59l8.29-8.3a1,1,0,1,1,1.42,1.42l-9,9A1,1,0,0,1,10,18Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -442,28 +464,28 @@
                             <p class="highlight highlight-purple">FORMS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -473,32 +495,32 @@
                             <p class="highlight highlight-yellow">FEEDBACK</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-red">
+                                    <figure class="task-icon-container bg-red">
                                         <svg fill="#FFF" width="100%" height="100%" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>circle-solid</title>
       <path d="M18,4A14,14,0,1,0,32,18,14,14,0,0,0,18,4Z" class="clr-i-solid clr-i-solid-path-1"/>
       <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
     </svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -508,28 +530,28 @@
                             <p class="highlight highlight-blue">BILLING</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -539,28 +561,28 @@
                             <p class="highlight highlight-green">ACCOUNTS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-blue">
+                                    <figure class="task-icon-container bg-blue">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="check" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M10,18a1,1,0,0,1-.71-.29l-5-5a1,1,0,0,1,1.42-1.42L10,15.59l8.29-8.3a1,1,0,1,1,1.42,1.42l-9,9A1,1,0,0,1,10,18Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -570,28 +592,28 @@
                             <p class="highlight highlight-purple">FORMS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -601,32 +623,32 @@
                             <p class="highlight highlight-yellow">FEEDBACK</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-red">
+                                    <figure class="task-icon-container bg-red">
                                         <svg fill="#FFF" width="100%" height="100%" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <title>circle-solid</title>
       <path d="M18,4A14,14,0,1,0,32,18,14,14,0,0,0,18,4Z" class="clr-i-solid clr-i-solid-path-1"/>
       <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
     </svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -641,35 +663,35 @@
                     <p class="light-text">IN PROGRESS</p>
                     <!-- cards -->
 
-                    <div class="card-list ">
+                    <div class="flex flex-col card-list ">
                         <article class="card">
                             <p>Optimized experience</p>
                             <p>mobile app</p>
                             <p class="highlight highlight-blue">BILLING</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -679,28 +701,28 @@
                             <p class="highlight highlight-green">ACCOUNTS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -710,28 +732,28 @@
                             <p class="highlight highlight-purple">FORMS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -741,28 +763,28 @@
                             <p class="highlight highlight-yellow">FEEDBACK</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -783,28 +805,28 @@
                             <p class="highlight highlight-blue">BILLING</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -814,28 +836,28 @@
                             <p class="highlight highlight-green">ACCOUNTS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -845,28 +867,28 @@
                             <p class="highlight highlight-purple">FORMS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -876,28 +898,28 @@
                             <p class="highlight highlight-yellow">FEEDBACK</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -918,28 +940,28 @@
                             <p class="highlight highlight-blue">BILLING</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -949,28 +971,28 @@
                             <p class="highlight highlight-green">ACCOUNTS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -980,28 +1002,28 @@
                             <p class="highlight highlight-purple">FORMS</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -1011,33 +1033,33 @@
                             <p class="highlight highlight-yellow">FEEDBACK</p>
                             <div class="flex justify-space-between">
                                 <div class="flex icons align-item-center gap-05">
-                                    <picture class="task-icon-container bg-green">
+                                    <figure class="task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
-                                    </picture>
+                                    </figure>
                                     <p>NUC-344</p>
                                 </div>
                                 <div class="flex">
-                                    <picture class="task-icon-container">
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
           <path d="M128,20A108,108,0,1,0,236,128,108.12186,108.12186,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09562,84.09562,0,0,1,128,212Zm24.28809-88.2832a39.99987,39.99987,0,0,1-56.56934,56.56738,12.0001,12.0001,0,0,1,16.9707-16.9707A15.99967,15.99967,0,1,0,124.00293,136a11.99971,11.99971,0,0,1-9.832-18.87988l14.7832-21.12793h-24.957a12,12,0,0,1,0-24h48a11.99971,11.99971,0,0,1,9.832,18.87988l-18.32226,26.18457A40.17514,40.17514,0,0,1,152.28809,123.7168Z"/>
                                         </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
       <path fill="#000000" fill-rule="evenodd" d="M6,3 C6,3.74028 5.5978,4.38663 5,4.73244 L5,7.99963 C5.83566,7.37194 6.87439,7 8,7 C9.42133,7 10.6118,6.01158 10.9215,4.6846 C10.3673,4.32903 10,3.70741 10,3 C10,1.89543 10.8954,1 12,1 C13.1046,1 14,1.89543 14,3 C14,3.76403 13.5716,4.42799 12.9419,4.76478 C12.5738,7.16318 10.5014,9 8,9 C6.57867,9 5.3882,9.98842 5.07847,11.3154 C5.63273,11.671 6,12.2926 6,13 C6,14.1046 5.10457,15 4,15 C2.89543,15 2,14.1046 2,13 C2,12.2597 2.4022,11.6134 3,11.2676 L3,4.73244 C2.4022,4.38663 2,3.74028 2,3 C2,1.89543 2.89543,1 4,1 C5.10457,1 6,1.89543 6,3 Z"/>
     </svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="-4 -2 24 24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-merge"><path d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z'/></svg>
-                                    </picture>
-                                    <picture class="task-icon-container">
+                                    </figure>
+                                    <figure class="task-icon-container">
                                         <svg width="100%" height="100%" viewBox="0 0 24 24" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
           <g transform="translate(0 -1028.4)">
             <path d="m12 0c-0.405 0-0.805 0.060326-1.188 0.15625-0.224 0.05678-0.44 0.13135-0.656 0.21875-0.083 0.03401-0.1679 0.05534-0.2498 0.09375-0.034 0.01583-0.06 0.04594-0.0937 0.0625-0.2032 0.10058-0.4021 0.21704-0.5937 0.34375-0.027 0.0174-0.0671 0.01339-0.0938 0.03125-0.0563 0.03864-0.101 0.08419-0.1562 0.12495-0.1569 0.1126-0.3216 0.216-0.4688 0.3438-0.1342 0.1207-0.2494 0.2724-0.375 0.4062-0.4251 0.4359-0.7936 0.8971-1.0938 1.4376-0.5154 0.9034-0.9002 1.9205-1.0624 2.9687-0.0783-0.0165-0.1501-0.0224-0.2188 0-0.5251 0.171-0.6545 1.1685-0.3125 2.2187 0.2007 0.6163 0.5346 1.1015 0.875 1.375 0.4573 1.7778 1.4257 3.2598 2.6875 4.1878v1.031l-1 1-2 1c-1.6173 0.801-3.2284 1.605-4.8438 2.406-0.89513 0.54-1.2415 1.6-1.1562 2.594 0.041664 0.626-0.18448 1.427 0.4375 1.844 0.5909 0.304 1.2959 0.106 1.9375 0.156 1.8766-0.001 3.7484 0 5.625 0 2.669 0.001 5.331 0 8 0 2.367 0 4.727 0.004 7.094 0 0.768-0.054 0.981-0.865 0.906-1.5 0.014-0.932 0.069-1.976-0.656-2.688-0.592-0.602-1.434-0.84-2.156-1.25-1.061-0.525-2.128-1.037-3.188-1.562l-2-1-1-1v-1.031c1.262-0.928 2.23-2.41 2.688-4.1878 0.34-0.2736 0.674-0.7588 0.874-1.375 0.342-1.0502 0.213-2.0477-0.312-2.2187-0.069-0.0224-0.14-0.0165-0.219 0-0.162-1.0482-0.547-2.0653-1.062-2.9687-0.3-0.5405-0.669-1.0017-1.094-1.4376-0.126-0.1338-0.241-0.2855-0.375-0.4062-0.006-0.0055-0.025 0.0055-0.031 0-0.392-0.3499-0.827-0.61894-1.281-0.84375-0.115-0.05622-0.227-0.10854-0.344-0.15625-0.084-0.03401-0.165-0.06426-0.25-0.09375-0.255-0.08848-0.516-0.17356-0.782-0.21875-0.02-0.003405-0.042 0.003148-0.062 0-0.249-0.039144-0.495-0.06525-0.75-0.0625z" transform="translate(0 1028.4)" fill="#34495e"/>
             <path d="m0 1051.4c0.026419 0.3 0.12651 0.6 0.4375 0.8 0.5909 0.3 1.2959 0.1 1.9375 0.2h5.625 8 7.094c0.576-0.1 0.842-0.5 0.906-1h-24z" fill="#2c3e50"/>
           </g>
                                     </svg>
-                                </picture>
+                                </figure>
                                 </div>
                             </div>
                         </article>
@@ -1048,6 +1070,7 @@
             </section>
             
         </main>
+
     </div>
 </body>
 </html>
