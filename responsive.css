@@ -5,6 +5,7 @@
 /* large mobile screen */
 @media screen and (max-width:450px)
 {
+    /* WIP */
     .sidebar-container{
         height: 100%;
         display: flex;
@@ -14,10 +15,8 @@
 
     .main-container{
         height: fit-content;
-        /* width: 100vw; */
     }
 
-    /* WIP */
     .filter-dropdown{
         justify-content: center;
     }
@@ -57,7 +56,6 @@
     .tasks-container{
         display: flex;
         flex-direction: column;
-        width: 100vw;
         margin-bottom: 0.5rem;
     }
     .card-list{
@@ -87,7 +85,6 @@
     
     .main-container{
         height: fit-content;
-        /* width: 100vw; */
     }
 
     .big-icon-container{
@@ -125,19 +122,17 @@
     .tasks-container{
         display: flex;
         flex-direction: column;
-        width: 100vw;
         margin-bottom: 0.5rem;
     }
     .card-list{ 
         flex-direction: row;
         overflow-x: scroll;
-        /* width: 100vh; */
     }
     .board-section2{
         flex-direction: column;
     }
 
-    
+
 }
 
 /* Laptop Screen */
