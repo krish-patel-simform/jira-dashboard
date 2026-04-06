@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script type="module" defer src="./index.js"></script>
+    <script type="module" defer src="./dragndrop.js"></script>
+    <script type="module" defer src="./data.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -47,7 +51,7 @@
                     <a href="">Teams</a>
                     <a href="">Plans</a>
                     <a href="">Apps</a>
-                    <button class="btn">Create</button>
+                    <button id="create-task" class="btn">Create</button>
                 </nav>
             </section>
             
@@ -333,12 +337,12 @@
             <section class="tasks-container">
 
                 <!-- TO DO -->
-                <article class="task-type-container">
+                <article id="todo" class="task-type-container droppable">
                     <!-- Task Type -->
                     <p class="light-text">TO DO</p>
                     <!-- cards -->
                     <div class="card-list">
-                        <article class="card">
+                        <!-- <article class="card">
                             <p>Optimized experience</p>
                             <p>mobile app</p>
                             <p class="highlight highlight-blue">BILLING</p>
@@ -593,20 +597,20 @@
                                 </figure>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
 
 
                 </article>
 
                 <!-- In progress -->
-                <article class="task-type-container">
+                <article id="in-progress" class="task-type-container droppable">
                     <!-- Task Type -->
                     <p class="light-text">IN PROGRESS</p>
                     <!-- cards -->
 
                     <div class="flex flex-col card-list ">
-                        <article class="card">
+                        <!-- <article class="card">
                             <p>Optimized experience</p>
                             <p>mobile app</p>
                             <p class="highlight highlight-blue">BILLING</p>
@@ -729,19 +733,19 @@
                                 </figure>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
 
                 </article>
 
                 <!-- In review -->
-                <article class="task-type-container">
+                <article id="in-review" class="task-type-container droppable">
                     <!-- Task Type -->
                     <p class="light-text">IN REVIEW</p>
                     <!-- cards -->
 
-                    <div class="card-list">
-                        <article class="card">
+                    <div class="card-list ">
+                        <!-- <article class="card">
                             <p>Optimized experience</p>
                             <p>mobile app</p>
                             <p class="highlight highlight-blue">BILLING</p>
@@ -864,19 +868,19 @@
                                 </figure>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
 
                 </article>
 
                 <!-- Done -->
-                <article class="task-type-container">
+                <article id="done" class="task-type-container droppable">
                     <!-- Task Type -->
                     <p class="light-text">DONE</p>
                     <!-- cards -->
 
-                    <div class="card-list">
-                        <article class="card">
+                    <div class="card-list ">
+                        <!-- <article class="card">
                             <p>Optimized experience</p>
                             <p>mobile app</p>
                             <p class="highlight highlight-blue">BILLING</p>
@@ -1004,7 +1008,7 @@
                                 </figure>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
 
                 </article>

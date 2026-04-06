@@ -284,6 +284,7 @@ p{
     background-color: #FFF;
     box-shadow: 3px 7px 10px rgb(224, 223, 223);
     min-height: max-content;
+    cursor: pointer;
 }
 
 .task-icon-container{
