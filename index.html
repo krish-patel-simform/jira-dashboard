@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="./util.css">
     <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./modal.css">
 
     <script type="module" defer src="./index.js"></script>
-    <script type="module" defer src="./dragndrop.js"></script>
+    <!-- <script type="module" defer src="./dragndrop.js"></script> -->
     <script type="module" defer src="./data.js"></script>
 
 </head>
 <body>
     <div class="container">
-
 
         <!-- header -->
         <header class="header flex justify-space-between">
@@ -1016,6 +1016,83 @@
             </section>
             
         </main>
+
+
+        <!-- Modal -->
+        <div id="taskModal" class="task-modal">
+          <div class="task-modal-box">
+            <div class="task-modal-top">
+              <h3>Create Issue</h3>
+              <!-- <button type="button" id="closeModalBtn" class="task-close-btn">✕</button> -->
+            </div>
+
+            <form id="taskForm" class="task-form">
+
+              <!-- Title -->
+              <div class="task-field">
+                <label for="taskTitle">Title</label>
+                <input type="text" id="taskTitle" name="title" placeholder="Enter task title" >
+              </div>
+
+              <!-- Name -->
+              <div class="task-field">
+                <label for="taskName">Name</label>
+                <input type="text" id="taskName" name="name" placeholder="Enter person name" required>
+              </div>
+
+              <!-- Status -->
+              <div class="task-field">
+                <label for="taskStatus">Status</label>
+                <select id="taskStatus" name="status" required>
+                  <option value="">Choose status</option>
+                  <option value="todo">To Do</option>
+                  <option value="inProgress">In Progress</option>
+                  <option value="inReview">In Review</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+
+              <!-- Priority -->
+              <div class="task-field">
+                <label for="taskPriority">Priority</label>
+                <select id="taskPriority" name="priority" required>
+                  <option value="">Choose priority</option>
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+
+              <!-- Tag -->
+              <div class="task-field">
+                <label for="taskTag">Tag</label>
+                <select id="taskTag" name="tag" required>
+                  <option value="">Choose tag</option>
+                  <option value="Accounts">Accounts</option>
+                  <option value="Billing">Billing</option>
+                  <option value="Forms">Forms</option>
+                  <option value="Feedback">Feedback</option>
+                </select>
+              </div>
+
+              <div class="task-form-actions">
+               <button type="button" id="deleteModalBtn" class="form-action-btn task-btn-delete hide">Delete</button>
+                
+                <button type="button" id="cancelModalBtn" class="form-action-btn task-btn-cancel">Cancel</button>
+                
+                <button type="submit" 
+                id="createModalBtn"
+                class="form-action-btn task-btn-create">Create</button>
+                
+                <button type="button" 
+                id="editModalBtn"
+                class="form-action-btn task-btn-edit hide">Edit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        
 
     </div>
 </body>

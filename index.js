@@ -1,14 +1,5 @@
 import {tasks} from './data.js'
 
-// create local storage 
-/*
-id
-name
-title
-status 
-category 
-*/
-
 // create card
 function createCard(task)
 {
@@ -24,8 +15,8 @@ function createCard(task)
     else
         tagColor = 'highlight-blue'
 
-   const html = `
-   <article class="card" id=${task.id} data-status=${task.status} data-priority=${task.priority}>
+   const card = `
+   <article class="card" id=${task.jiraId} data-status=${task.status} data-priority=${task.priority}>
                             <p>${task.title}</p>
                             <p>mobile app</p>
                             <p class="highlight ${tagColor}">${task.tag}</p>
@@ -34,7 +25,8 @@ function createCard(task)
                                     <figure class="icon-container task-icon-container bg-green">
                                         <svg fill="#000000" width="100%" height="100%" viewBox="0 0 24 24" id="bookmark" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M18,2H6A2,2,0,0,0,4,4V21a1,1,0,0,0,.5.86,1,1,0,0,0,1,0L12,18.15l6.5,3.72A1,1,0,0,0,19,22a.9.9,0,0,0,.5-.14A1,1,0,0,0,20,21V4A2,2,0,0,0,18,2Z" style="fill: #FFF;"></path></svg>
                                     </figure>
-                                    <p>${task.jiraId}</p>
+                                    <p>${task.jiraId||'NCU-355'}</p>
+                                    <p>${task.priority}</p>
                                 </div>
                                 <div class="flex">
                                     <figure class="icon-container task-icon-container">
@@ -57,32 +49,7 @@ function createCard(task)
                             </div>
                         </article>`
 
-    return html;
-}
-
-const todoContainerEle = document.querySelector('#todo > .card-list')
-const inProgressContainerEle = document.querySelector('#in-progress > .card-list')
-const inReviewContainerEle = document.querySelector('#in-review > .card-list')
-const doneContainerEle = document.querySelector('#done > .card-list')
-
-
-console.log(todoContainerEle)
-console.log(inProgressContainerEle)
-console.log(inReviewContainerEle)
-console.log(doneContainerEle)
-
-
-// filter data based on status
-// const todoTasks = tasks.filter((task)=> task.status === 'todo') 
-// const inProgressTasks = tasks.filter((task)=> task.status === 'inProgress') 
-// const inReviewTasks = tasks.filter((task)=> task.status === 'inReview') 
-// const doneTasks = tasks.filter((task)=> task.status === 'done') 
-
-
-for(const task of tasks)
-{
-    const card = createCard(task)
-
+    // return html;
     switch(task.status)
     {
         case 'todo':
@@ -98,5 +65,264 @@ for(const task of tasks)
             doneContainerEle.insertAdjacentHTML('beforeend',card)
             break;
     }
+}
+
+const todoContainerEle = document.querySelector('#todo > .card-list')
+const inProgressContainerEle = document.querySelector('#in-progress > .card-list')
+const inReviewContainerEle = document.querySelector('#in-review > .card-list')
+const doneContainerEle = document.querySelector('#done > .card-list')
+
+const createBtnEle = document.getElementById('create-task');
+
+const taskFormEle = document.getElementById('taskForm');
+const modalEle = document.getElementById('taskModal');
+
+const editModalBtnEle = document.getElementById('editModalBtn');
+const deleteModalBtnEle = document.getElementById('deleteModalBtn');
+const createModalBtnEle = document.getElementById('createModalBtn');
+// form element
+const taskTitle = document.getElementById('taskTitle')
+const taskName = document.getElementById('taskName')
+const taskStatus = document.getElementById('taskStatus')
+const taskPriority = document.getElementById('taskPriority')
+const taskTag = document.getElementById('taskTag')
+
+let seletedCardEle = null;
+
+
+const taskContainerEle = document.querySelector('.tasks-container')
+
+function handleCardClick(e)
+{
+    const card = e.target.closest('.card')
+    if(!card)
+        return;
+
+    console.log(card)
+    seletedCardEle = card;
+
+    //find the data from tasks
+    const cardData = tasks.find((task)=> task.jiraId === card.id)
+
+    console.log(cardData)
+    //handle button that show
+    createModalBtnEle.classList.add('hide')
+    editModalBtnEle.classList.remove('hide')
+    deleteModalBtnEle.classList.remove('hide')
+
+    // fill the data 
+    taskTitle.value = cardData.title;
+    taskName.value = cardData.name;
+    taskStatus.value = cardData.status;
+    taskTag.value = cardData.tag;
+    taskPriority.value = cardData.priority;
+    // seletedJiraId = cardData.jiraId;
+
+    modalEle.classList.add('show')
+    
+    // open the modal with filed data rigth
+}
+
+function handleCreateBtnHandler(e)
+{
+    // show the modal
+    createModalBtnEle.classList.remove('hide')
+    editModalBtnEle.classList.add('hide')
+    deleteModalBtnEle.classList.add('hide')
+
+    modalEle.classList.add('show');
+}
+
+function handleCancelFormBtn(e)
+{
+    //hide the modal
+    console.log("hide")
+    modalEle.classList.remove('show')
+}
+
+function handleEditFormBtn(e)
+{
+    // logic for edit the data 
+    e.preventDefault()
+
+    const data = validForm()
+    if(data)
+    {
+        console.log("valid data edit case")
+        console.log("before Edit:",seletedCardEle.id)
+
+        const cardDataIndex = tasks.findIndex((task)=> task.jiraId === seletedCardEle.id)
+
+        if(cardDataIndex === -1)
+        {
+            console.log("Error in editHandler we can not get the data from selected Jira Id")
+        }
+        else
+        {
+            console.log("final to edit it ",data.jiraId)
+            tasks[cardDataIndex] = data
+            console.log(tasks[cardDataIndex])
+
+            // remove the selected Crad Ele
+            seletedCardEle.remove()
+
+            createCard(data)
+
+        }
+
+        //once the modal hide
+        modalEle.classList.remove('show')
+        seletedCardEle = null;
+        console.log(seletedCardEle)
+    }
+    else
+    {
+        alert('Form is invalid')
+    }
 
 }
+
+function handleDeleteFormBtn(e)
+{
+    if(!seletedCardEle)
+        return;
+    
+    // update the array
+    tasks = tasks.filter((task)=> task.jiraId !== seletedCardEle.id)
+    
+    seletedCardEle.remove();
+
+    seletedCardEle = null;
+}
+
+function validForm()
+{
+    let isValid = true
+
+
+    if(taskTitle.value.trim() === '')
+    {
+        showError(taskTitle,"Title is required");
+        isValid = false;
+    }else {
+        removeError(taskTitle)
+    }
+
+    if(taskName.value.trim() === '')
+    {
+        showError(taskName,"Name is required");
+        isValid = false;
+    }else {
+        removeError(taskName)
+    }
+
+    if(taskStatus.value.trim() === '')
+    {   
+        showError(taskStatus,"Status is required");
+        isValid = false;
+    }else {
+        removeError(taskStatus)
+    }
+
+    if(taskPriority.value.trim() === '')
+    {
+        showError(taskPriority,"Task Priority is required");
+        isValid = false;
+    }else {
+        removeError(taskPriority)
+    }
+
+    if(taskTag.value.trim() === '')
+    {
+        showError(taskTag,"Task Tag is required");
+        isValid = false;
+    }else {
+        removeError(taskTag)
+    }
+
+    return isValid ? {
+        name: taskName.value.trim(),
+        title: taskTitle.value.trim(),
+        tag: taskTag.value,
+        status: taskStatus.value,
+        priority: taskPriority.value,
+        jiraId : seletedCardEle ? seletedCardEle.id : 'NUC-' + Math.floor(Math.random()*(999-101+1)) + 101 
+    } : null;
+}
+
+function showError(input, message) {
+    input.classList.add('error');
+
+    let errorEle = input.nextElementSibling;
+    if (!errorEle || !errorEle.classList.contains('error-text')) {
+        errorEle = document.createElement('small');
+        errorEle.classList.add('error-text');
+        input.parentNode.appendChild(errorEle);
+    }
+    errorEle.innerText = message;
+}
+
+function removeError(input) {
+    input.classList.remove('error');
+
+    const errorEle = input.parentNode.querySelector('.error-text');
+    if (errorEle) errorEle.remove();
+}
+
+
+
+
+console.log(todoContainerEle)
+console.log(inProgressContainerEle)
+console.log(inReviewContainerEle)
+console.log(doneContainerEle)
+
+for(const task of tasks)
+{
+    createCard(task)
+}
+
+function formActionHandler(e)
+{
+    const button = e.target.closest('.form-action-btn')
+    if(!button)
+        return;
+
+    switch(button.innerText)
+    {
+        case 'Edit':
+            handleEditFormBtn(e)
+            break;
+        case 'Cancel':
+            handleCancelFormBtn(e)
+            break;
+        case 'Delete':
+            handleDeleteFormBtn(e)
+            break;
+    }
+}
+
+createBtnEle.addEventListener('click',handleCreateBtnHandler)
+
+document.querySelector('.task-form-actions').addEventListener('click',formActionHandler)
+
+taskFormEle.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    const data = validForm()
+    if(data)
+    {
+        console.log("valid")
+        // here add to the data
+        tasks.push(data)
+        createCard(data)
+        modalEle.classList.remove('show')
+        // taskFormEle.reset();
+    }
+    else
+    {
+        alert('Form is invalid')
+    }
+})
+
+taskContainerEle.addEventListener('click',handleCardClick)
