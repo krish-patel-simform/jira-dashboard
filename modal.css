@@ -114,13 +114,18 @@
   background-color: var(--bg-btn-hover)
 }
 
-.task-btn-create {
+.task-btn-create,.task-btn-edit {
   background-color: var(--bg-blue-modal);
   color: var(--color-white);
   border-color: var(--bg-blue-modal);
 }
+.task-btn-delete{
+  background-color: red;
+  color: var(--color-white);
+  /* border-color: var(--bg-blue-modal); */
+}
 
-.task-btn-create:hover {
+.task-btn-create:hover,.task-btn-edit:hover {
   background-color: var(--bg-btn-promary-hover);
 }
 .error {

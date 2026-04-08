@@ -1,4 +1,4 @@
-import {tasks} from './data.js'
+import {getDefaultData} from './data.js'
 
 // create card
 function createCard(task)
@@ -92,6 +92,8 @@ let seletedCardEle = null;
 
 const taskContainerEle = document.querySelector('.tasks-container')
 
+let tasks = JSON.parse(localStorage.getItem('tasks'))?? getDefaultData()
+
 function handleCardClick(e)
 {
     const card = e.target.closest('.card')
@@ -162,6 +164,8 @@ function handleEditFormBtn(e)
             console.log("final to edit it ",data.jiraId)
             tasks[cardDataIndex] = data
             console.log(tasks[cardDataIndex])
+            // again set the tasks
+            localStorage.setItem('tasks',JSON.stringify(tasks));
 
             // remove the selected Crad Ele
             seletedCardEle.remove()
@@ -189,10 +193,13 @@ function handleDeleteFormBtn(e)
     
     // update the array
     tasks = tasks.filter((task)=> task.jiraId !== seletedCardEle.id)
+    // update the localstorage
+    localStorage.setItem('tasks',tasks)
     
+    modalEle.classList.remove('show')
     seletedCardEle.remove();
-
     seletedCardEle = null;
+
 }
 
 function validForm()
@@ -269,13 +276,11 @@ function removeError(input) {
     if (errorEle) errorEle.remove();
 }
 
-
-
-
 console.log(todoContainerEle)
 console.log(inProgressContainerEle)
 console.log(inReviewContainerEle)
 console.log(doneContainerEle)
+
 
 for(const task of tasks)
 {
@@ -316,6 +321,7 @@ taskFormEle.addEventListener('submit',(e)=>{
         // here add to the data
         tasks.push(data)
         createCard(data)
+        localStorage.setItem('tasks',JSON.stringify(tasks))
         modalEle.classList.remove('show')
         // taskFormEle.reset();
     }

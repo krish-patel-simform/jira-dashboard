@@ -1,4 +1,4 @@
-const tasks = [
+let tasks = [
     {
         id: 1,
         name: 'person1',
@@ -140,5 +140,13 @@ const tasks = [
         avatar: 'https://i2-prod.mirror.co.uk/incoming/article5614456.ece/ALTERNATES/s1227b/PAY-Lee-Griggs.jpg',
     },
 ];
+
+//check if localstorage is exist 
+
+function getDefaultData()
+{
+    localStorage.setItem('tasks',JSON.stringify(tasks))
+    return tasks;
+}
  
-export { tasks };
+export { tasks ,getDefaultData};
