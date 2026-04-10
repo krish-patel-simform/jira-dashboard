@@ -1,6 +1,7 @@
 import {getDefaultData} from './data.js'
+import {filterBasedOnPriority, searchTasks, sortTask} from './filter.js'
+import Router from './Route.js';
 
-// create card
 function createCard(task)
 {
     let tagColor;
@@ -81,18 +82,53 @@ const editModalBtnEle = document.getElementById('editModalBtn');
 const deleteModalBtnEle = document.getElementById('deleteModalBtn');
 const createModalBtnEle = document.getElementById('createModalBtn');
 // form element
+const formTitle = document.querySelector('.task-modal-top > h3')
 const taskTitle = document.getElementById('taskTitle')
 const taskName = document.getElementById('taskName')
 const taskStatus = document.getElementById('taskStatus')
 const taskPriority = document.getElementById('taskPriority')
 const taskTag = document.getElementById('taskTag')
+const filterPriorityEle = document.getElementById('filter-priority');
+const sortTaskEle = document.getElementById('sort-task')
+const filterSearchEle = document.querySelector('.filter-search')
 
 let seletedCardEle = null;
-
 
 const taskContainerEle = document.querySelector('.tasks-container')
 
 let tasks = JSON.parse(localStorage.getItem('tasks'))?? getDefaultData()
+
+Router.register("/", () => {
+  modalEle.classList.remove("show");
+});
+
+Router.register("/create", () => {
+  createModalBtnEle.classList.remove('hide');
+  editModalBtnEle.classList.add('hide');
+  deleteModalBtnEle.classList.add('hide');
+  formTitle.innerText = "Create Issue"
+
+  modalEle.classList.add("show");
+});
+
+Router.register("/edit/:id", (id) => {
+  const cardData = tasks.find(task => task.jiraId === id);
+  if (!cardData) return;
+
+  createModalBtnEle.classList.add('hide');
+  editModalBtnEle.classList.remove('hide');
+  deleteModalBtnEle.classList.remove('hide');
+
+  taskTitle.value = cardData.title;
+  taskName.value = cardData.name;
+  taskStatus.value = cardData.status;
+  taskTag.value = cardData.tag;
+  taskPriority.value = cardData.priority;
+  formTitle.innerText = "Edit Issue"
+
+  modalEle.classList.add("show");
+});
+Router.init()
 
 function handleCardClick(e)
 {
@@ -103,24 +139,26 @@ function handleCardClick(e)
     console.log(card)
     seletedCardEle = card;
 
-    //find the data from tasks
-    const cardData = tasks.find((task)=> task.jiraId === card.id)
+    Router.navigate(`/edit/${card.id}`);
 
-    console.log(cardData)
-    //handle button that show
-    createModalBtnEle.classList.add('hide')
-    editModalBtnEle.classList.remove('hide')
-    deleteModalBtnEle.classList.remove('hide')
+    // //find the data from tasks
+    // const cardData = tasks.find((task)=> task.jiraId === card.id)
 
-    // fill the data 
-    taskTitle.value = cardData.title;
-    taskName.value = cardData.name;
-    taskStatus.value = cardData.status;
-    taskTag.value = cardData.tag;
-    taskPriority.value = cardData.priority;
-    // seletedJiraId = cardData.jiraId;
+    // console.log(cardData)
+    // //handle button that show
+    // createModalBtnEle.classList.add('hide')
+    // editModalBtnEle.classList.remove('hide')
+    // deleteModalBtnEle.classList.remove('hide')
 
-    modalEle.classList.add('show')
+    // // fill the data 
+    // taskTitle.value = cardData.title;
+    // taskName.value = cardData.name;
+    // taskStatus.value = cardData.status;
+    // taskTag.value = cardData.tag;
+    // taskPriority.value = cardData.priority;
+    // // seletedJiraId = cardData.jiraId;
+
+    // modalEle.classList.add('show')
     
     // open the modal with filed data rigth
 }
@@ -128,18 +166,24 @@ function handleCardClick(e)
 function handleCreateBtnHandler(e)
 {
     // show the modal
-    createModalBtnEle.classList.remove('hide')
-    editModalBtnEle.classList.add('hide')
-    deleteModalBtnEle.classList.add('hide')
+    // createModalBtnEle.classList.remove('hide')
+    // editModalBtnEle.classList.add('hide')
+    // deleteModalBtnEle.classList.add('hide')
 
-    modalEle.classList.add('show');
+    // modalEle.classList.add('show');
+
+    // openRoute('/create')
+    Router.navigate("/create");
 }
 
 function handleCancelFormBtn(e)
 {
     //hide the modal
-    console.log("hide")
-    modalEle.classList.remove('show')
+    // console.log("hide")
+    // modalEle.classList.remove('show')
+
+    // closeRoute()
+    Router.navigate("/");
 }
 
 function handleEditFormBtn(e)
@@ -175,7 +219,8 @@ function handleEditFormBtn(e)
         }
 
         //once the modal hide
-        modalEle.classList.remove('show')
+        Router.navigate('/')
+        // modalEle.classList.remove('show')
         seletedCardEle = null;
         console.log(seletedCardEle)
     }
@@ -194,12 +239,44 @@ function handleDeleteFormBtn(e)
     // update the array
     tasks = tasks.filter((task)=> task.jiraId !== seletedCardEle.id)
     // update the localstorage
-    localStorage.setItem('tasks',tasks)
+    localStorage.setItem('tasks',JSON.stringify(tasks));
+
     
-    modalEle.classList.remove('show')
+    // modalEle.classList.remove('show')
+    Router.navigate('/')
     seletedCardEle.remove();
     seletedCardEle = null;
 
+}
+
+function handleFilterPriority(e)
+{
+    tasks = filterBasedOnPriority(e.target.value);
+    // here we need to update the ui first of remove entire ui 
+
+    doneContainerEle.innerHTML = "";
+    inProgressContainerEle.innerHTML = "";
+    inReviewContainerEle.innerHTML = "";
+    todoContainerEle.innerHTML = "";
+
+    for(const task of tasks)
+    {
+        createCard(task)
+    }
+}
+
+function handleSortTask(e)
+{
+    tasks = sortTask(e.target.value,tasks);
+    doneContainerEle.innerHTML = "";
+    inProgressContainerEle.innerHTML = "";
+    inReviewContainerEle.innerHTML = "";
+    todoContainerEle.innerHTML = "";
+
+    for(const task of tasks)
+    {
+        createCard(task)
+    }
 }
 
 function validForm()
@@ -276,6 +353,36 @@ function removeError(input) {
     if (errorEle) errorEle.remove();
 }
 
+function debounce(fn,delay)
+{
+    let timer;
+    return function()
+    {
+        const args = arguments;
+        const context = this;
+        clearTimeout(timer)
+
+        timer = setTimeout(()=>{
+            fn.call(context,...args)
+        },delay)
+    }
+}
+
+function handleSearch(e)
+{
+    tasks = searchTasks(e.target.value);
+
+    doneContainerEle.innerHTML = "";
+    inProgressContainerEle.innerHTML = "";
+    inReviewContainerEle.innerHTML = "";
+    todoContainerEle.innerHTML = "";
+
+    for(const task of tasks)
+    {
+        createCard(task)
+    }
+}
+
 console.log(todoContainerEle)
 console.log(inProgressContainerEle)
 console.log(inReviewContainerEle)
@@ -330,5 +437,12 @@ taskFormEle.addEventListener('submit',(e)=>{
         alert('Form is invalid')
     }
 })
+
+filterPriorityEle.addEventListener('change',handleFilterPriority)
+
+sortTaskEle.addEventListener('change',handleSortTask)
+
+const debounceHandleSearch = debounce(handleSearch,500);
+filterSearchEle.addEventListener('input',debounceHandleSearch)
 
 taskContainerEle.addEventListener('click',handleCardClick)

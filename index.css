@@ -37,7 +37,7 @@ body{
     font-family: "Open Sans", sans-serif;
     margin: 0;
 }
-button{
+button,select{
     cursor:pointer;
 }
 a{
