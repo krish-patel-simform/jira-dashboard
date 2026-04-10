@@ -140,49 +140,15 @@ function handleCardClick(e)
     seletedCardEle = card;
 
     Router.navigate(`/edit/${card.id}`);
-
-    // //find the data from tasks
-    // const cardData = tasks.find((task)=> task.jiraId === card.id)
-
-    // console.log(cardData)
-    // //handle button that show
-    // createModalBtnEle.classList.add('hide')
-    // editModalBtnEle.classList.remove('hide')
-    // deleteModalBtnEle.classList.remove('hide')
-
-    // // fill the data 
-    // taskTitle.value = cardData.title;
-    // taskName.value = cardData.name;
-    // taskStatus.value = cardData.status;
-    // taskTag.value = cardData.tag;
-    // taskPriority.value = cardData.priority;
-    // // seletedJiraId = cardData.jiraId;
-
-    // modalEle.classList.add('show')
-    
-    // open the modal with filed data rigth
 }
 
 function handleCreateBtnHandler(e)
 {
-    // show the modal
-    // createModalBtnEle.classList.remove('hide')
-    // editModalBtnEle.classList.add('hide')
-    // deleteModalBtnEle.classList.add('hide')
-
-    // modalEle.classList.add('show');
-
-    // openRoute('/create')
     Router.navigate("/create");
 }
 
 function handleCancelFormBtn(e)
 {
-    //hide the modal
-    // console.log("hide")
-    // modalEle.classList.remove('show')
-
-    // closeRoute()
     Router.navigate("/");
 }
 
