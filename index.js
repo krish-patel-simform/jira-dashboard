@@ -108,6 +108,13 @@ Router.register("/create", () => {
   deleteModalBtnEle.classList.add('hide');
   formTitle.innerText = "Create Issue"
 
+  taskTitle.value = "";
+  taskName.value = "";
+  taskStatus.value = "";
+  taskTag.value = "";
+  taskPriority.value = "";
+
+
   modalEle.classList.add("show");
 });
 
