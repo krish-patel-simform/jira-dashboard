@@ -2,6 +2,40 @@ import {getDefaultData} from './data.js'
 import {filterBasedOnPriority, searchTasks, sortTask} from './filter.js'
 import Router from './Route.js';
 
+
+const todoContainerEle = document.querySelector('#todo > .card-list')
+const inProgressContainerEle = document.querySelector('#in-progress > .card-list')
+const inReviewContainerEle = document.querySelector('#in-review > .card-list')
+const doneContainerEle = document.querySelector('#done > .card-list')
+
+const createBtnEle = document.getElementById('create-task');
+
+const taskFormEle = document.getElementById('taskForm');
+const modalEle = document.getElementById('taskModal');
+
+const editModalBtnEle = document.getElementById('editModalBtn');
+const deleteModalBtnEle = document.getElementById('deleteModalBtn');
+const createModalBtnEle = document.getElementById('createModalBtn');
+// form element
+const formTitle = document.querySelector('.task-modal-top > h3')
+const taskTitle = document.getElementById('taskTitle')
+const taskName = document.getElementById('taskName')
+const taskStatus = document.getElementById('taskStatus')
+const taskPriority = document.getElementById('taskPriority')
+const taskTag = document.getElementById('taskTag')
+const filterPriorityEle = document.getElementById('filter-priority');
+const sortTaskEle = document.getElementById('sort-task')
+const filterSearchEle = document.querySelector('.filter-search')
+
+
+let seletedCardEle = null;
+let currentFillter = null;
+let currentSorting = null;
+
+const taskContainerEle = document.querySelector('.tasks-container')
+
+let tasks = JSON.parse(localStorage.getItem('tasks'))?? getDefaultData()
+
 function createCard(task)
 {
     let tagColor;
@@ -68,35 +102,6 @@ function createCard(task)
     }
 }
 
-const todoContainerEle = document.querySelector('#todo > .card-list')
-const inProgressContainerEle = document.querySelector('#in-progress > .card-list')
-const inReviewContainerEle = document.querySelector('#in-review > .card-list')
-const doneContainerEle = document.querySelector('#done > .card-list')
-
-const createBtnEle = document.getElementById('create-task');
-
-const taskFormEle = document.getElementById('taskForm');
-const modalEle = document.getElementById('taskModal');
-
-const editModalBtnEle = document.getElementById('editModalBtn');
-const deleteModalBtnEle = document.getElementById('deleteModalBtn');
-const createModalBtnEle = document.getElementById('createModalBtn');
-// form element
-const formTitle = document.querySelector('.task-modal-top > h3')
-const taskTitle = document.getElementById('taskTitle')
-const taskName = document.getElementById('taskName')
-const taskStatus = document.getElementById('taskStatus')
-const taskPriority = document.getElementById('taskPriority')
-const taskTag = document.getElementById('taskTag')
-const filterPriorityEle = document.getElementById('filter-priority');
-const sortTaskEle = document.getElementById('sort-task')
-const filterSearchEle = document.querySelector('.filter-search')
-
-let seletedCardEle = null;
-
-const taskContainerEle = document.querySelector('.tasks-container')
-
-let tasks = JSON.parse(localStorage.getItem('tasks'))?? getDefaultData()
 
 Router.register("/", () => {
   modalEle.classList.remove("show");
@@ -170,7 +175,9 @@ function handleEditFormBtn(e)
         console.log("valid data edit case")
         console.log("before Edit:",seletedCardEle.id)
 
-        const cardDataIndex = tasks.findIndex((task)=> task.jiraId === seletedCardEle.id)
+        const storedTasks = JSON.parse(localStorage.getItem('tasks'))
+
+        const cardDataIndex = storedTasks.findIndex((task)=> task.jiraId === seletedCardEle.id)
 
         if(cardDataIndex === -1)
         {
@@ -179,18 +186,30 @@ function handleEditFormBtn(e)
         else
         {
             console.log("final to edit it ",data.jiraId)
-            tasks[cardDataIndex] = data
-            console.log(tasks[cardDataIndex])
+            storedTasks[cardDataIndex] = data
+            console.log(storedTasks[cardDataIndex])
             // again set the tasks
-            localStorage.setItem('tasks',JSON.stringify(tasks));
+            localStorage.setItem('tasks',JSON.stringify(storedTasks));
 
             // remove the selected Crad Ele
             seletedCardEle.remove()
 
-            createCard(data)
-
+            // check if any sorting or filter applied
+            if(currentFillter)
+            {
+                console.log("Apply filter called:",currentFillter)
+                applyFilter(currentFillter)
+            }
+            if(currentSorting)
+            {
+                console.log("Apply Sorting called:",currentSorting)
+                applySorting(currentSorting)
+            }
+            else
+            {
+                createCard(data)
+            }
         }
-
         //once the modal hide
         Router.navigate('/')
         // modalEle.classList.remove('show')
@@ -222,11 +241,35 @@ function handleDeleteFormBtn(e)
 
 }
 
-function handleFilterPriority(e)
+function applyFilter(filter,currentTasks)
 {
-    tasks = filterBasedOnPriority(e.target.value);
+    //set the filter
+    currentFillter = filter === 'all' ? null : filter
+    tasks = filterBasedOnPriority(filter,currentTasks);
     // here we need to update the ui first of remove entire ui 
 
+    doneContainerEle.innerHTML = "";
+    inProgressContainerEle.innerHTML = "";
+    inReviewContainerEle.innerHTML = "";
+    todoContainerEle.innerHTML = "";
+
+    // for(const task of tasks)
+    // {
+    //     createCard(task)
+    // }
+
+    applySorting(currentSorting)
+}
+
+function handleFilterPriority(e)
+{
+    applyFilter(e.target.value)
+}
+
+function applySorting(base)
+{
+    currentSorting = base === 'no-sort' ? null : base
+    tasks = sortTask(base,tasks);
     doneContainerEle.innerHTML = "";
     inProgressContainerEle.innerHTML = "";
     inReviewContainerEle.innerHTML = "";
@@ -240,16 +283,7 @@ function handleFilterPriority(e)
 
 function handleSortTask(e)
 {
-    tasks = sortTask(e.target.value,tasks);
-    doneContainerEle.innerHTML = "";
-    inProgressContainerEle.innerHTML = "";
-    inReviewContainerEle.innerHTML = "";
-    todoContainerEle.innerHTML = "";
-
-    for(const task of tasks)
-    {
-        createCard(task)
-    }
+   applySorting(e.target.value)
 }
 
 function validForm()
@@ -404,6 +438,8 @@ taskFormEle.addEventListener('submit',(e)=>{
         localStorage.setItem('tasks',JSON.stringify(tasks))
         modalEle.classList.remove('show')
         // taskFormEle.reset();
+
+        Router.navigate('/')
     }
     else
     {

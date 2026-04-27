@@ -44,8 +44,8 @@ function sortTask(sortProperty,tasks)
             tasks = tasks.sort((a,b)=> priorityOrder[a.priority] - priorityOrder[b.priority] )
             console.log(tasks)
             return tasks;
-        case 'no-sort':
-            tasks = JSON.parse(localStorage.getItem('tasks'))
+        default:
+            // tasks = tasks
             return tasks
     }
 }
