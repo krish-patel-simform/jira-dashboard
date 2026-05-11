@@ -205,7 +205,7 @@ function handleEditFormBtn(e)
                 console.log("Apply Sorting called:",currentSorting)
                 applySorting(currentSorting)
             }
-            else
+            else if(!currentFillter && !currentSorting)
             {
                 createCard(data)
             }
@@ -390,10 +390,10 @@ function handleSearch(e)
     }
 }
 
-console.log(todoContainerEle)
-console.log(inProgressContainerEle)
-console.log(inReviewContainerEle)
-console.log(doneContainerEle)
+// console.log(todoContainerEle)
+// console.log(inProgressContainerEle)
+// console.log(inReviewContainerEle)
+// console.log(doneContainerEle)
 
 
 for(const task of tasks)
@@ -433,10 +433,29 @@ taskFormEle.addEventListener('submit',(e)=>{
     {
         console.log("valid")
         // here add to the data
-        tasks.push(data)
-        createCard(data)
-        localStorage.setItem('tasks',JSON.stringify(tasks))
+        // tasks.push(data)
+        // createCard(data)
+        const storedTasks = JSON.parse(localStorage.getItem('tasks'))
+        storedTasks.push(data)
+        localStorage.setItem('tasks',JSON.stringify(storedTasks))
         modalEle.classList.remove('show')
+
+        // check if any sorting or filter applied
+        if(currentFillter)
+        {
+            console.log("Apply filter called:",currentFillter)
+            applyFilter(currentFillter)
+        }
+        if(currentSorting)
+        {
+            console.log("Apply Sorting called:",currentSorting)
+            applySorting(currentSorting)
+        }
+        else if(!currentFillter && !currentSorting)
+        {
+            createCard(data)
+        }
+
         // taskFormEle.reset();
 
         Router.navigate('/')
