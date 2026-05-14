@@ -1,0 +1,142 @@
+.task-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(9, 30, 66, 0.3);
+  z-index: 9999;
+}
+
+
+.task-modal.show {
+  display: block;
+}
+
+.task-modal-box {
+  width: 420px;
+  max-width: calc(100% - 32px);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--rem-half);
+  padding: var(--rem1-125);
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(9, 30, 66, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+.task-modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--rem1-125);
+}
+
+.task-modal-top h3 {
+  margin: 0;
+  font-size: var(--rem1-125);
+  font-weight: var(--font-weight-600);
+  color: var(--color-text-black);
+}
+
+.task-close-btn {
+  background: transparent;
+  border: none;
+  font-size: var(--rem1-125);
+  cursor: pointer;
+  color: var(--color-text-muted);
+  padding: 4px 6px;
+}
+
+.task-close-btn:hover {
+  color: var(--color-text-black);
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rem1);
+}
+
+.task-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rem-half);
+}
+
+.task-field label {
+  font-size: var(--rem1);
+  font-weight: var(--font-weight-600);
+  color: var(--color-text-secondary);
+}
+
+.task-field input,
+.task-field select {
+  width: 100%;
+  padding: 9px 10px;
+  font-size: var(--rem1);
+  border: 1px solid var(--border-btn-primary);
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  color: var(--color-text-black);
+}
+
+.task-field input:focus,
+.task-field select:focus {
+  border-color: var(--border-color-modal);
+}
+
+.task-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--rem-075);
+  margin-top: var(--rem-half);
+}
+
+.form-action-btn
+/* .task-btn-cancel,
+.task-btn-create,.task-btn-edit,.task-btn-delete  */
+{
+  border: 1px solid var(--border-btn-primary);
+  border-radius: 4px;
+  padding: var(--rem-half) var(--rem1);
+  font-size: var(--rem1);
+  cursor: pointer;
+  background-color: var(--color-white);
+  color: var(--color-text-black);
+}
+
+.task-btn-cancel:hover {
+  background-color: var(--bg-btn-hover)
+}
+
+.task-btn-create,.task-btn-edit {
+  background-color: var(--bg-blue-modal);
+  color: var(--color-white);
+  border-color: var(--bg-blue-modal);
+}
+.task-btn-delete{
+  background-color: red;
+  color: var(--color-white);
+  /* border-color: var(--bg-blue-modal); */
+}
+
+.task-btn-create:hover,.task-btn-edit:hover {
+  background-color: var(--bg-btn-promary-hover);
+}
+.error {
+    border: 1px solid red;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+}
+
+.hide{
+  display: none;
+}
