@@ -24,11 +24,11 @@ function filterBasedOnPriority(priority)
     return tasks
 }
 
-function filterBasedOntag(tag,tasks)
-{
-    tasks = tasks.filter((task)=> task.tag === tag)
-    return tasks;
-}
+// function filterBasedOntag(tag,tasks)
+// {
+//     tasks = tasks.filter((task)=> task.tag === tag)
+//     return tasks;
+// }
 
 function sortTask(sortProperty,tasks)
 {
@@ -62,4 +62,4 @@ function searchTasks(searhQuery)
 
 }
 
-export {filterBasedOnPriority, filterBasedOntag,sortTask,searchTasks}
+export {filterBasedOnPriority,sortTask,searchTasks}

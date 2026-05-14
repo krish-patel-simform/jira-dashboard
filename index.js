@@ -102,6 +102,10 @@ function createCard(task)
     }
 }
 
+for(const task of tasks)
+{
+    createCard(task)
+}
 
 Router.register("/", () => {
   modalEle.classList.remove("show");
@@ -124,6 +128,7 @@ Router.register("/create", () => {
 });
 
 Router.register("/edit/:id", (id) => {
+  const tasks = JSON.parse(localStorage.getItem('tasks'))
   const cardData = tasks.find(task => task.jiraId === id);
   if (!cardData) return;
 
@@ -227,6 +232,7 @@ function handleDeleteFormBtn(e)
 {
     if(!seletedCardEle)
         return;
+    let tasks = JSON.parse(localStorage.getItem('tasks'))
     
     // update the array
     tasks = tasks.filter((task)=> task.jiraId !== seletedCardEle.id)
@@ -269,6 +275,7 @@ function handleFilterPriority(e)
 function applySorting(base)
 {
     currentSorting = base === 'no-sort' ? null : base
+    let tasks = JSON.parse(localStorage.getItem('tasks'))
     tasks = sortTask(base,tasks);
     doneContainerEle.innerHTML = "";
     inProgressContainerEle.innerHTML = "";
@@ -394,12 +401,6 @@ function handleSearch(e)
 // console.log(inProgressContainerEle)
 // console.log(inReviewContainerEle)
 // console.log(doneContainerEle)
-
-
-for(const task of tasks)
-{
-    createCard(task)
-}
 
 function formActionHandler(e)
 {
